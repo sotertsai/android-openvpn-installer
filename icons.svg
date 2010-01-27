@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="icons.svg">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <mask
+       id="id2">
+      <linearGradient
+         y2="209.732"
+         y1="182.803"
+         x2="115.194"
+         x1="84.9893"
+         id="id3"
+         gradientUnits="userSpaceOnUse">
+        <stop
+           style="stop-opacity:1; stop-color:white"
+           offset="0"
+           id="stop18" />
+        <stop
+           style="stop-opacity:0; stop-color:white"
+           offset="1"
+           id="stop20" />
+      </linearGradient>
+      <rect
+         y="169.354"
+         x="69.8008"
+         width="60.5813"
+         style="fill:url(#id3)"
+         id="rect22"
+         height="53.8267" />
+    </mask>
+    <mask
+       id="id0">
+      <linearGradient
+         y2="119.972"
+         y1="93.0432"
+         x2="115.194"
+         x1="84.9893"
+         id="id1"
+         gradientUnits="userSpaceOnUse">
+        <stop
+           style="stop-opacity:1; stop-color:white"
+           offset="0"
+           id="stop10" />
+        <stop
+           style="stop-opacity:0; stop-color:white"
+           offset="1"
+           id="stop12" />
+      </linearGradient>
+      <rect
+         y="79.5944"
+         x="69.8008"
+         width="60.5813"
+         style="fill:url(#id1)"
+         id="rect14"
+         height="53.8267" />
+    </mask>
+    <style
+       type="text/css"
+       id="style6">
+   
+    .str0 {stroke:#1F1A17;stroke-width:0.0762}
+    .str1 {stroke:#5D9D35;stroke-width:2.8222}
+    .str2 {stroke:#AC2A28;stroke-width:2.8222}
+    .fil0 {fill:none}
+    .fil1 {fill:#84C225}
+    .fil3 {fill:#DA251D}
+    .fil2 {fill:white}
+   
+  </style>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1340">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop1342" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop1344" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1348">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop1350" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop1352" />
+    </linearGradient>
+    <inkscape:perspective
+       id="perspective2850"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1348"
+       id="linearGradient2900"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0153657,0,0,2.0153657,159.64827,52.585603)"
+       x1="75.354950"
+       y1="169.39200"
+       x2="105.64469"
+       y2="208.10085" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1340"
+       id="linearGradient2903"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0153657,0,0,2.0153657,159.64827,52.585603)"
+       x1="75.847473"
+       y1="79.632500"
+       x2="109.09230"
+       y2="124.12687" />
+    <inkscape:perspective
+       id="perspective2970"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1348-1"
+       id="linearGradient2900-2"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0153657,0,0,2.0153657,159.64827,52.585603)"
+       x1="75.35495"
+       y1="169.392"
+       x2="105.64469"
+       y2="208.10085" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1348-1">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop1350-3" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop1352-4" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1348-1"
+       id="linearGradient3042"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0153657,0,0,2.0153657,315.02787,-276.10278)"
+       x1="75.35495"
+       y1="169.392"
+       x2="105.64469"
+       y2="208.10085" />
+    <inkscape:perspective
+       id="perspective3825"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-127.85714"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1150"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <symbol
+       style="fill-rule:evenodd"
+       id="carre"
+       viewBox="89.4717 132.972 31.0566 31.0566"
+       transform="matrix(3.543307,0,0,3.543307,-15.398406,-160.62536)">
+      <path
+         style="fill:none;stroke:#1f1a17;stroke-width:0.0762"
+         class="fil0 str0"
+         d="m 97.2549,133.01 15.4902,0 c 4.2599,0 7.7451,3.4852 7.7451,7.7451 l 0,15.4902 c 0,4.2599 -3.4852,7.7451 -7.7451,7.7451 l -15.4902,0 c -4.2599,0 -7.7451,-3.4852 -7.7451,-7.7451 l 0,-15.4902 c 0,-4.2599 3.4852,-7.7451 7.7451,-7.7451 z"
+         id="path25" />
+    </symbol>
+    <g
+       id="g2909"
+       transform="translate(-257.14286,-148.57143)"
+       inkscape:export-filename="/home/fries/Development/eclipse/workspaces/android/OpenVPN-Installer/res/drawable/ic_installed.png"
+       inkscape:export-xdpi="40.191734"
+       inkscape:export-ydpi="40.191734">
+      <circle
+         d="m 134.431,110.081 c 0,18.85721 -15.28679,34.144 -34.144,34.144 -18.857208,0 -34.143998,-15.28679 -34.143998,-34.144 0,-18.85721 15.28679,-34.144 34.143998,-34.144 18.85721,0 34.144,15.28679 34.144,34.144 z"
+         class="fil1 str1"
+         cx="100.287"
+         cy="110.081"
+         id="circle29"
+         r="34.144001"
+         sodipodi:cx="100.287"
+         sodipodi:cy="110.081"
+         sodipodi:rx="34.144001"
+         sodipodi:ry="34.144001"
+         style="fill:#84c225;fill-rule:evenodd;stroke:#5d9d35;stroke-width:2.82220006"
+         transform="matrix(2.0153657,0,0,2.0153657,159.64827,52.585603)" />
+      <path
+         class="fil2"
+         d="m 350.98904,236.45283 c 4.46567,0 18.11576,0 22.58118,0 4.46567,0 5.73637,-0.30189 5.73676,5.73595 -6.1e-4,9.49577 5.97376,15.46894 15.46915,15.46894 6.03762,0 5.73594,1.27127 5.73594,5.73672 0,4.46528 0,18.11576 0,22.58121 0,4.46546 0.30296,5.73655 -5.73594,5.73672 -9.49602,-6e-4 -15.46894,5.97317 -15.46894,15.46895 0,6.03804 -1.2713,5.73615 -5.73676,5.73615 -4.46524,0 -18.11572,0 -22.58117,0 -4.46546,0 -5.73655,0.30295 -5.73672,-5.73615 6e-4,-9.49578 -5.97317,-15.46895 -15.46898,-15.46895 -6.03865,0 -5.73612,-1.27109 -5.73612,-5.73672 0,-4.46566 0,-18.11576 0,-22.58121 0,-4.46563 -0.30189,-5.73633 5.73612,-5.73672 9.49542,0 15.46876,-5.97317 15.46876,-15.46894 0,-6.03847 1.27109,-5.73595 5.73672,-5.73595 l 0,0 z"
+         id="path31"
+         style="fill:#ffffff;fill-rule:evenodd" />
+      <path
+         class="fil2"
+         d="m 361.76339,213.07434 c 30.53905,0 55.87083,22.32181 60.57609,51.53599 -42.05969,-35.40196 -109.12022,0.56452 -100.06256,56.79102 -13.37417,-11.25744 -21.87741,-28.1178 -21.87741,-46.96309 0,-33.88458 27.47934,-61.36392 61.36388,-61.36392 z"
+         id="path33"
+         style="fill:url(#linearGradient2903);fill-opacity:1;fill-rule:evenodd" />
+    </g>
+    <g
+       id="g2914"
+       transform="translate(-57.142857,-331.42858)"
+       inkscape:export-filename="/home/fries/Development/eclipse/workspaces/android/OpenVPN-Installer/res/drawable/ic_not_installed.png"
+       inkscape:export-xdpi="40.191734"
+       inkscape:export-ydpi="40.191734">
+      <circle
+         d="m 134.431,199.84 c 0,18.85721 -15.28679,34.144 -34.144,34.144 -18.857208,0 -34.143998,-15.28679 -34.143998,-34.144 0,-18.85721 15.28679,-34.144 34.143998,-34.144 18.85721,0 34.144,15.28679 34.144,34.144 z"
+         class="fil3 str2"
+         cx="100.287"
+         cy="199.84"
+         id="circle35"
+         r="34.144001"
+         sodipodi:cx="100.287"
+         sodipodi:cy="199.84"
+         sodipodi:rx="34.144001"
+         sodipodi:ry="34.144001"
+         style="fill:#da251d;fill-rule:evenodd;stroke:#ac2a28;stroke-width:2.82220006"
+         transform="matrix(2.0153657,0,0,2.0153657,159.64827,52.585603)" />
+      <path
+         class="fil2"
+         d="m 394.77713,438.55665 c 6.03765,0 5.73594,1.27131 5.73594,5.73676 0,4.46524 0,18.11572 0,22.58118 0,4.46545 0.30295,5.73654 -5.73594,5.73675 -14.93246,-8.1e-4 -50.05669,0 -64.99255,0 -6.03864,0 -5.73615,-1.27109 -5.73615,-5.73675 0,-4.46567 0,-18.11573 0,-22.58118 0,-4.46567 -0.30189,-5.73633 5.73615,-5.73676 14.94596,0 50.0462,0 64.99255,0 z"
+         id="path37"
+         style="fill:#ffffff;fill-rule:evenodd" />
+      <path
+         class="fil2"
+         d="m 361.76339,393.97271 c 30.53905,0 55.87083,22.32181 60.57609,51.53595 -42.05969,-35.40193 -109.12022,0.56452 -100.06256,56.79106 -13.37417,-11.25744 -21.87741,-28.11781 -21.87741,-46.9631 0,-33.88457 27.47934,-61.36391 61.36388,-61.36391 z"
+         id="path39"
+         style="fill:url(#linearGradient2900);fill-opacity:1;fill-rule:evenodd" />
+    </g>
+    <g
+       id="g3839"
+       inkscape:export-filename="/home/fries/Development/eclipse/workspaces/android/OpenVPN-Installer/res/drawable/ic_scanning.png"
+       inkscape:export-xdpi="40.191734"
+       inkscape:export-ydpi="40.191734">
+      <circle
+         d="m 134.431,199.84 c 0,18.85721 -15.28679,34.144 -34.144,34.144 -18.857208,0 -34.143998,-15.28679 -34.143998,-34.144 0,-18.85721 15.28679,-34.144 34.143998,-34.144 18.85721,0 34.144,15.28679 34.144,34.144 z"
+         class="fil3 str2"
+         cx="100.287"
+         cy="199.84"
+         id="circle35-4"
+         r="34.144001"
+         sodipodi:cx="100.287"
+         sodipodi:cy="199.84"
+         sodipodi:rx="34.144001"
+         sodipodi:ry="34.144001"
+         style="fill:#f8d820;fill-rule:evenodd;stroke:#fffd76;stroke-width:2.82220006000000012;fill-opacity:1;stroke-opacity:1"
+         transform="matrix(2.0153657,0,0,2.0153657,315.02787,-276.10278)" />
+      <path
+         class="fil2"
+         d="m 517.14299,65.28433 c 30.53905,0 55.87083,22.32181 60.57609,51.53595 -42.05969,-35.40193 -109.12022,0.56452 -100.06256,56.79106 -13.37417,-11.25744 -21.87741,-28.11781 -21.87741,-46.9631 0,-33.88457 27.47934,-61.36391 61.36388,-61.36391 z"
+         id="path39-9"
+         style="fill:url(#linearGradient3042);fill-opacity:1;fill-rule:evenodd" />
+    </g>
+  </g>
+</svg>

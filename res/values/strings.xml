@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, OpenVPNInstaller!</string>
+    <string name="app_name">OpenVPN Installer</string>
+    
+    <string name="help_dialog_title">OpenVPN Help</string>
+    
+</resources>

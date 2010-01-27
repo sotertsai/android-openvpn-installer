@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/installer"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_weight="1" />
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_weight="1">
+		<TextView
+			android:text="OpenVPN Installer"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:textSize="@dimen/large"
+			/>
+		<TextView
+			android:text="Version: OpenVPN 2.1.1"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:paddingTop="3pt" />
+	</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_weight="1" />
+
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_weight="1"
+			android:layout_gravity="center">
+
+			<ImageView
+				android:id="@+id/installer_installed_icon"
+				android:src="@drawable/ic_installed"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingRight="6pt" />
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:orientation="vertical"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1">
+				<TextView
+					android:id="@+id/installer_binary_msg"
+					android:text="Binary located at"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_horizontal"
+					android:textSize="@dimen/large" />
+				<TextView
+					android:id="@+id/installer_binary_path"
+					android:text="/system/xbin/openvpn"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_horizontal" />
+			</LinearLayout>
+
+
+		</LinearLayout>
+
+
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_weight="1" />
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<!-- 
+			<Button
+				android:id="@+id/installer_backup"
+				android:text="Backup"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1" />
+			 -->
+			<Button
+				android:id="@+id/installer_install"
+				android:text="Install"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1" />
+			<Button
+				android:id="@+id/installer_exit"
+				android:text="Exit"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1" />
+		</LinearLayout>
+
+
+	</LinearLayout>
