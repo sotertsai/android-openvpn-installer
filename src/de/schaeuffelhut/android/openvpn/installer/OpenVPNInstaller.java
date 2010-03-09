@@ -314,7 +314,7 @@ public class OpenVPNInstaller extends Activity {
 				if ( isReadOnly ) {
 					log( String.format( "%s is mounted read-only", mountPoint.mountPoint ) );
 					log( String.format( "trying to remount read-write" ) );
-					exec( "su", "-c", String.format( "mount -oremount,rw %s", mountPoint.mountPoint.getAbsolutePath() ) );
+					exec( "su", "-c", String.format( "mount -o remount,rw %s %s", mountPoint.device.getAbsolutePath(), mountPoint.mountPoint.getAbsolutePath() ) );
 					mountPoint = findMountPointRecursive(file);
 				} else {
 					log( String.format( "%s is already mounted read-write", mountPoint.mountPoint ) );
@@ -338,7 +338,7 @@ public class OpenVPNInstaller extends Activity {
 					if ( isReadOnly ) {
 						log( String.format( "%s was mounted read-read-only", mountPoint.mountPoint ) );
 						log( String.format( "trying to remount read-only" ) );
-						exec( "su", "-c", String.format( "mount -oremount,ro %s", mountPoint.mountPoint.getAbsolutePath() ) );
+						exec( "su", "-c", String.format( "mount -oremount,ro %s %s", mountPoint.device.getAbsolutePath(), mountPoint.mountPoint.getAbsolutePath() ) );
 						mountPoint = findMountPointRecursive(file);
 						if ( mountPoint.flags.contains("ro") )
 							log( String.format( "Success!" ) );
