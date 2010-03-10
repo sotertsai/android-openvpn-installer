@@ -338,7 +338,7 @@ public class OpenVPNInstaller extends Activity {
 					if ( isReadOnly ) {
 						log( String.format( "%s was mounted read-read-only", mountPoint.mountPoint ) );
 						log( String.format( "trying to remount read-only" ) );
-						exec( "su", "-c", String.format( "mount -oremount,ro %s %s", mountPoint.device.getAbsolutePath(), mountPoint.mountPoint.getAbsolutePath() ) );
+						exec( "su", "-c", String.format( "mount -o remount,ro %s %s", mountPoint.device.getAbsolutePath(), mountPoint.mountPoint.getAbsolutePath() ) );
 						mountPoint = findMountPointRecursive(file);
 						if ( mountPoint.flags.contains("ro") )
 							log( String.format( "Success!" ) );
