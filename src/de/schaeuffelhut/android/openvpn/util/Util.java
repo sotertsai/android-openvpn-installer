@@ -204,8 +204,7 @@ public class Util
 		} while ( false );
 	}
 
-	public final static void copyAsset(String tag, AssetManager assets, String assetName,
-			File target) {
+	public final static void copyAsset(String tag, AssetManager assets, String assetName, File target) {
 		if ( target.exists() )
 		{
 			Log.d( tag, String.format( "asset %s already installed at %s", assetName, target ) );
@@ -223,6 +222,46 @@ public class Util
 				int count;
 				while( ( count = is.read( buffer ) ) != -1 )
 					os.write( buffer, 0, count );
+			}
+			catch (IOException e)
+			{
+				Log.e( tag, "copy", e );
+			}
+			finally
+			{
+				closeQuietly( is );
+				closeQuietly( os );
+			}
+		}
+	}
+
+	public final static void readAsset(String tag, AssetManager assets, String assetName, File target) {
+		if ( target.exists() )
+		{
+			Log.d( tag, String.format( "asset %s already installed at %s", assetName, target ) );
+		}
+		else
+		{
+			Log.d( tag, String.format( "copying asset %s to %s", assetName, target ) );
+			InputStream is = null;
+			OutputStream os = null;
+			try
+			{
+				is = assets.open( assetName );
+				os = new FileOutputStream( target );
+				byte[] buffer = new byte[1024*1024*1024];
+				int offset = 0;
+				int count;
+				while( ( count = is.read( buffer, offset, buffer.length - offset ) ) != -1 )
+				{
+					offset += count;
+					if ( buffer.length - offset < 1 )
+					{
+						byte[] tmp = new byte[buffer.length + buffer.length/2];
+						System.arraycopy(buffer, 0, tmp, 0, buffer.length);
+						buffer = tmp;
+					}
+				}
 			}
 			catch (IOException e)
 			{

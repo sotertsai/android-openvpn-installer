@@ -24,10 +24,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.LineNumberReader;
 import java.io.OutputStream;
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+
+import com.eaio.stringsearch.BNDM;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -54,9 +57,10 @@ public class OpenVPNInstaller extends Activity {
 
 	final static int DIALOG_BACKUP = 1;
 	final static int DIALOG_CHOOSE_TARGET = 2;
-	final static int DIALOG_CONFIRM_INSTALL = 3;
-	final static int DIALOG_LOG = 4;
-	final static int DIALOG_HELP = 5;
+	final static int DIALOG_CHOOSE_IFCONFIG = 3;
+	final static int DIALOG_CONFIRM_INSTALL = 4;
+	final static int DIALOG_LOG = 5;
+	final static int DIALOG_HELP = 6;
 
 	private ImageView mIcon;
 	private TextView mMsg;
@@ -125,10 +129,45 @@ public class OpenVPNInstaller extends Activity {
 					dialog.dismiss();
 					switch (which) {
 					case 0:
-						install( xbin );
+						mInstallPathTarget = xbin;
+						showDialog( DIALOG_CHOOSE_IFCONFIG );
 						break;
 					case 1:
-						install( bin );
+						mInstallPathTarget = bin;
+						showDialog( DIALOG_CHOOSE_IFCONFIG );
+						break;
+					}
+				}
+			})
+			.setNegativeButton( "Cancel", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) {
+					dialog.dismiss();
+				}
+			})
+			.create(); }
+			
+
+		case DIALOG_CHOOSE_IFCONFIG: {
+			final File xbinbb = new File("/system/xbin/bb");
+			final File xbin = new File("/system/xbin/");
+			final File bin = new File("/system/bin/");
+			return new AlertDialog.Builder(this)
+			.setTitle( "Choose path to ifconfig/route" )
+			.setItems(new String[]{ xbinbb.getAbsolutePath(), xbin.getAbsolutePath(), bin.getAbsolutePath()}, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) {
+					dialog.dismiss();
+					switch (which) {
+					case 0:
+						mInstallPathIfconfig = xbinbb;
+						install();
+						break;
+					case 1:
+						mInstallPathIfconfig = xbin;
+						install();
+						break;
+					case 2:
+						mInstallPathIfconfig = bin;
+						install();
 						break;
 					}
 				}
@@ -293,11 +332,13 @@ public class OpenVPNInstaller extends Activity {
 	private final class InstallerThread extends Thread {
 		private final ProgressDialog progressDialog;
 		final File file;
+		final File pathToIfconfig;
 		ArrayList<String> log = new ArrayList<String>();
 
-		private InstallerThread(ProgressDialog progressDialog, File target) {
+		private InstallerThread(ProgressDialog progressDialog, File target, File pathToIfconfig) {
 			this.progressDialog = progressDialog;
 			this.file = target;
+			this.pathToIfconfig = pathToIfconfig;
 		}
 
 		@Override
@@ -322,7 +363,7 @@ public class OpenVPNInstaller extends Activity {
 
 				if ( mountPoint.flags.contains( "rw") ) {
 					log( String.format( "copying openvpn to %s", file ) );
-					File tmp = unpackAsset();
+					File tmp = unpackAsset( pathToIfconfig );
 					exec( "su", "-c", String.format( "cp '%s' '%s'; chmod 555 '%s'", 
 							tmp.getAbsolutePath().replace( "\\", "\\\\").replace("'", "\\'"),
 							file.getAbsolutePath().replace( "\\", "\\\\").replace("'", "\\'"),
@@ -484,14 +525,16 @@ public class OpenVPNInstaller extends Activity {
 	void backup() {
 	}
 
-	void install(File target) {
+	private File mInstallPathTarget;
+	private File mInstallPathIfconfig;
+	void install() {
 
 		final ProgressDialog progressDialog = new ProgressDialog(this);
 		progressDialog.setMessage("Installing openvpn binary");
 		progressDialog.show();
 		setInstalling();
 
-		mInstallerThread = new InstallerThread(progressDialog, target);
+		mInstallerThread = new InstallerThread(progressDialog, mInstallPathTarget, mInstallPathIfconfig);
 		mInstallerThread.start();
 	}
 
@@ -556,25 +599,85 @@ public class OpenVPNInstaller extends Activity {
 	}
 
 
-	private File unpackAsset(){
+//	private File unpackAsset(){
+//		InputStream asset = null;
+//		OutputStream os = null;
+//		try {
+//			File tmp = File.createTempFile("openvpn", "tmp");
+//			try{
+//				asset = getAssets().open("openvpn");
+//				os = new FileOutputStream(tmp);
+//				byte[] buf = new byte[1024];
+//				int length;
+//				while( ( length = asset.read(buf) ) >= 0 )
+//					os.write(buf, 0, length);
+//				return tmp;
+//			}finally{
+//				Util.closeQuietly(asset);
+//				Util.closeQuietly(os);
+//			}
+//		} catch (IOException e) {
+//			throw new RuntimeException( e );
+//		}
+//	}
+	
+	private File unpackAsset(File pathToIfconfig){
+		byte[] buffer;
+		int offset = 0;
 		InputStream asset = null;
-		OutputStream os = null;
 		try {
-			File tmp = File.createTempFile("openvpn", "tmp");
 			try{
 				asset = getAssets().open("openvpn");
-				os = new FileOutputStream(tmp);
-				byte[] buf = new byte[1024];
-				int length;
-				while( ( length = asset.read(buf) ) >= 0 )
-					os.write(buf, 0, length);
-				return tmp;
+				
+				buffer = new byte[1024*1024];
+				int count;
+				while( ( count = asset.read( buffer, offset, buffer.length - offset ) ) != -1 )
+				{
+					offset += count;
+					if ( buffer.length - offset < 1 )
+					{
+						byte[] tmp = new byte[buffer.length + buffer.length/2];
+						System.arraycopy(buffer, 0, tmp, 0, buffer.length);
+						buffer = tmp;
+					}
+				}
 			}finally{
 				Util.closeQuietly(asset);
-				Util.closeQuietly(os);
 			}
 		} catch (IOException e) {
 			throw new RuntimeException( e );
 		}
+		
+		replace(buffer, "/system/xbin/bb/ifconfig\0".getBytes(), (new File( pathToIfconfig, "ifconfig").getAbsolutePath()+"\0").getBytes());
+		replace(buffer, "/system/xbin/bb/route\0".getBytes(), (new File(pathToIfconfig, "route").getAbsolutePath()+"\0").getBytes());
+		
+		OutputStream os = null;
+		File tmp;
+		try
+		{
+			tmp = File.createTempFile("openvpn.mem", "tmp");
+			os = new FileOutputStream(tmp);
+			os.write(buffer, 0, offset );
+		}
+		catch (IOException e)
+		{
+			throw new RuntimeException( e );
+		}
+		finally
+		{
+			Util.closeQuietly(os);
+		}
+		
+		return tmp;
 	}
+
+
+	private void replace(byte[] buffer, byte[] pattern, byte[] replacement) {
+		if ( replacement.length > pattern.length )
+			throw new RuntimeException( "Patch is longer than original string!" );
+		int start = new BNDM().searchBytes(buffer, pattern );
+		if ( start >= 0 )
+			System.arraycopy(replacement, 0, buffer, start, replacement.length);
+	}
+
 }
