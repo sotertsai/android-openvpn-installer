@@ -457,8 +457,8 @@ public class OpenVPNInstaller extends Activity {
 			};
 
 			ArrayList<File> paths = new ArrayList<File>();
-			paths.addAll( Arrays.asList( new File("/system/xbin").listFiles( filenameFilter) ) );
-			paths.addAll( Arrays.asList( new File("/system/bin").listFiles( filenameFilter) ) );
+			paths.addAll( Arrays.asList( defaultArray(new File("/system/xbin").listFiles( filenameFilter)) ) );
+			paths.addAll( Arrays.asList( defaultArray(new File("/system/bin").listFiles( filenameFilter)) ) );
 
 			String[] pathNames = new String[paths.size()];
 			for(int i=0; i<paths.size(); i++ )
@@ -472,6 +472,10 @@ public class OpenVPNInstaller extends Activity {
 			mHandler.sendMessage(msg);
 
 			mProgressDialog.dismiss();
+		}
+
+		private File[] defaultArray(File[] listFiles) {
+			return listFiles == null ? new File[0] : listFiles;
 		}
 
 	}
@@ -495,7 +499,7 @@ public class OpenVPNInstaller extends Activity {
 		if ( pathName == null )
 		{
 			mIcon.setImageResource( R.drawable.ic_not_installed );
-			mMsg.setText( "Binary not found" );
+			mMsg.setText( "Binary not installed" );
 			mPath.setText( mInstallerThread == null ? "" : "Choose 'Show Log' from menu!" );
 //			mBackup.setEnabled(false);
 		}
