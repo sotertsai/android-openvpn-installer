@@ -243,10 +243,17 @@ public class OpenVPNInstaller extends Activity {
 		case DIALOG_LOG: {
 			TextView logView = (TextView)dialog.findViewById( 815 );
 			logView.setText("");
-			for(String s : mInstallerThread.log ){
-				if ( logView.length() > 0 )
-					logView.append( "\n" );
-				logView.append( s );
+			if ( mInstallerThread == null )
+			{
+				logView.append( "Installer was not yet executed!" );
+			}
+			else
+			{
+				for(String s : mInstallerThread.log ){
+					if ( logView.length() > 0 )
+						logView.append( "\n" );
+					logView.append( s );
+				}
 			}
 			if ( logView.length() == 0 )
 				logView.append( "The log is empty." );
